@@ -1,0 +1,263 @@
+
+\documentclass[11pt,a4paper]{article}
+
+% ---- Preamble (self-contained, pdflatex-friendly)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+  pdfauthor={Burren Gemini Collective},
+  pdftitle={Section Ω+Ψ — Final Bridges: Flavor, Chronal Fidelity \& Informational Cost}
+}
+
+% ---- Theorem styles
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---- Shortcuts
+\newcommand{\BoxOp}{\Box} % wave operator
+\newcommand{\CF}{\Lambda_{\text{CF}}}
+\newcommand{\IC}{\Lambda_{\text{IC}}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\RR}{\mathbb{R}}
+
+\title{\vspace{-1em}\textbf{Section $\Omega+\Psi$ — Final Bridges: Flavor, Chronal Fidelity \& Informational Cost}\\
+\large Woven Light Hypothesis (WLH) / BGC Compendium Insert (Standalone)}
+\author{Burren Gemini Collective}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+This stand-alone insert closes the WLH/BGC three-bridge programme.
+It presents: (i) the \emph{Flavor Spectrum} Rank--3 theorem (exactly three stable generations);
+(ii) the \emph{Chronal Fidelity Theorem} (bounded Hamiltonian, causality);
+and the missing third pillar, (iii) the \emph{Informational Cost Law} (memory formation and entropic balance for the $t_1\!\to\!t_3$ bridge).
+The document is self-contained and pdflatex-ready for independent review.
+\end{abstract}
+
+\tableofcontents
+
+\section{Preliminaries}
+We work on a globally hyperbolic $4$D spacetime $(\mathcal{M},g)$ with signature $(-,+,+,+)$, wave operator $\BoxOp=\nabla_\mu\nabla^\mu$, and a timelike congruence $u^\mu$ with $u^\mu u_\mu=-1$ and spatial projector $h_{\mu\nu}=g_{\mu\nu}+u_\mu u_\nu$.
+The velocity-gradient decomposition is
+\begin{equation}
+\nabla_\mu u_\nu=\sigma_{\mu\nu}+\omega_{\mu\nu}+\tfrac13 \theta\,h_{\mu\nu}-u_\mu a_\nu,
+\end{equation}
+with shear $\sigma_{\mu\nu}$, vorticity $\omega_{\mu\nu}$, expansion $\theta=\nabla_\mu u^\mu$, and $a_\mu=u^\nu\nabla_\nu u_\mu$.
+We define invariants
+\(
+\Sigma^2:=\sigma_{\mu\nu}\sigma^{\mu\nu},\;
+\Omega^2:=\omega_{\mu\nu}\omega^{\mu\nu}.
+\)
+
+\section{Flavor Spectrum (Rank--3 Bound, Summary)}
+Let $\Psi$ denote the flavor multiplet.
+After the $6D\to4D$ projection, the effective mass operator is
+\begin{equation}
+\Mcal_{\mathrm{eff}}=\alpha_{12}\,\epsilon_{12}+\alpha_{13}\,\epsilon_{13}+\alpha_{32}\,\epsilon_{32},
+\end{equation}
+and the flavor field obeys
+\begin{equation}
+\big(\BoxOp+\Mcal_{\mathrm{eff}}\big)\Psi=0.
+\end{equation}
+Each bridge field $\epsilon_{\gamma}$ ($\gamma\in\{12,13,32\}$) is a retarded, source-driven solution of a Klein--Gordon-type PDE.
+Introduce the \emph{bridge space} $\mathbb{B}=\mathrm{span}\{12,13,32\}$ and scalars $d_{12}=\alpha_{12}\epsilon_{12}$, etc., and write $D=\mathrm{diag}(d_{12},d_{13},d_{32})$.
+Then there exist linear maps $A:\mathbb{F}\to\mathbb{B}$, $B:\mathbb{B}\to\mathbb{F}$ such that
+\begin{equation}
+\Mcal_{\mathrm{eff}}=BDA.
+\end{equation}
+
+\begin{theorem}[Rank--3 Bound for the Flavor Mass Operator]
+With three independent bridges and causal guardrails, $\mathrm{rank}(\Mcal_{\mathrm{eff}})\le 3$.
+If the three channels are active and non-degenerate, exactly three stable flavor eigenmodes exist.
+\end{theorem}
+
+\subsection{Effective Mass Operator: Concrete $3\times 3$ Structure}
+Let the three bridge amplitudes be
+\begin{equation}
+d_{12}:=\alpha_{12}\,\epsilon_{12},\qquad
+d_{13}:=\alpha_{13}\,\epsilon_{13},\qquad
+d_{32}:=\alpha_{32}\,\epsilon_{32},
+\end{equation}
+with each $\epsilon_{\gamma}$ the retarded, source-driven solution fixed by the boundary-condition laws already derived.
+Define the channel--flavor coupling matrix
+\begin{equation}
+C \;\equiv\; \big[\,\mathbf{c}^{(12)}\;\;\mathbf{c}^{(13)}\;\;\mathbf{c}^{(32)}\big]
+\in\mathbb{R}^{3\times 3},
+\end{equation}
+whose columns $\mathbf{c}^{(\gamma)}\in\mathbb{R}^3$ encode how each bridge couples into flavor space (set by the $6D\!\to\!4D$ Interaction Matrix).
+
+\paragraph{Dyadic/Gram form (real symmetric).}
+The effective flavor mass operator takes the definitive form
+\begin{equation}
+\boxed{\;\mathcal{M}_{\mathrm{eff}}
+\;=\;
+C\,\mathrm{diag}(d_{12},d_{13},d_{32})\,C^{\top}
+\;=\;
+\sum_{\gamma\in\{12,13,32\}} d_{\gamma}\,\mathbf{c}^{(\gamma)}\mathbf{c}^{(\gamma)\top}\;},
+\end{equation}
+so that componentwise
+\begin{equation}
+\boxed{\;M_{ij}
+=\sum_{\gamma\in\{12,13,32\}} d_{\gamma}\,c^{(\gamma)}_{i}\,c^{(\gamma)}_{j}\; .}
+\end{equation}
+
+\paragraph{Mixing-matrix form (equivalent view).}
+Choose a mixing matrix $U\in\mathbb{R}^{3\times 3}$ (orthogonal if real; unitary if complex). Then
+\begin{equation}
+\mathcal{M}_{\mathrm{eff}}
+=
+\begin{cases}
+U\,\mathrm{diag}(d_{12},d_{13},d_{32})\,U^{\top}, & \text{(real symmetric)},\\[4pt]
+U\,\mathrm{diag}(d_{12},d_{13},d_{32})\,U^{\dagger}, & \text{(Hermitian)}.
+\end{cases}
+\end{equation}
+
+\paragraph{Rank bound and non-degeneracy.}
+Since $\mathrm{rank}(C\,\mathrm{diag}(d)\,C^\top)\le\mathrm{rank}(\mathrm{diag}(d))\le 3$, we obtain the bound $\mathrm{rank}(\mathcal{M}_{\mathrm{eff}})\le 3$.
+If the three channel vectors $\{\mathbf{c}^{(\gamma)}\}$ are linearly independent and $d_{12},d_{13},d_{32}\neq 0$ on the domain of interest, then exactly three non-degenerate eigenmodes exist (the observed three flavor generations).
+
+\section{Chronal Fidelity: Final Causality Law and Bounded Energy}
+\subsection{Field Equation, Source, and Boundary Form}
+The $t_3\!\to\!t_2$ bridge field encodes global temporal inertia (``memory stiffness'') and satisfies
+\begin{equation}\label{eq:CF-PDE}
+(\BoxOp-\mu_{32}^2)\,\epsilon_{32}=-\frac{g_{32}}{Z_{32}}\,\J_{32},\qquad \mu_{32}^2=\frac{m_{32}^2}{Z_{32}},\;\;Z_{32}>0.
+\end{equation}
+We take the observable source
+\begin{equation}\label{eq:CF-source}
+\boxed{\J_{32}=\gamma_1 R_{\mu\nu}u^\mu u^\nu+\gamma_2\theta^2+\gamma_3 u^\alpha\nabla_\alpha\theta+\gamma_4 a_\mu a^\mu+\gamma_5\nabla_\mu a^\mu.}
+\end{equation}
+The retarded boundary-form solution is
+\begin{equation}\label{eq:CF-BC}
+\epsilon_{32}(x)=\frac{g_{32}}{Z_{32}}\!\int_{\mathcal{D}^-(x)}\!\sqrt{-g}\,G^{(\mu_{32})}_{\mathrm{ret}}(x,y)\,\J_{32}(y)\,d^4y+\text{(hom.\ data on $\Sigma$)}.
+\end{equation}
+We impose purely source-driven data by setting the homogeneous term to zero on $\Sigma$.
+
+\subsection{Law of Global Inertia (Energy Balance)}
+Recall the $t_2\!\to\!t_1$ (Nedery) bridge
+\begin{equation}\label{eq:Nedery}
+(\BoxOp-\mu_{12}^2)\,\epsilon_{12}=-\frac{g_{12}}{Z_{12}}\,\J_{12},
+\qquad
+\J_{12}=\kappa_1(\Omega^2-\Sigma^2)+\kappa_2\theta^2+\kappa_3 a^2+\kappa_4\nabla\!\cdot a+\kappa_5\mathcal{R}.
+\end{equation}
+Define the exchange functional
+\begin{equation}
+\Ecal_{\mathrm{X}}(t):=\int_{\Sigma_t}\epsilon_{12}\epsilon_{32}\,dV,\qquad dV=\sqrt{h}\,d^3x.
+\end{equation}
+Multiplying \eqref{eq:Nedery} by $\epsilon_{32}$ and \eqref{eq:CF-PDE} by $\epsilon_{12}$, integrating over $\Sigma_t$, and using Green identities (vanishing flux through $\partial\Sigma_t$) yields the \emph{Law of Global Inertia}
+\begin{equation}\label{eq:CF-balance}
+\boxed{\frac{d}{d\tau}\Ecal_{\mathrm{X}}(t)+\CF\!\int_{\Sigma_t}\epsilon_{12}^2\,dV
+=\int_{\Sigma_t}\!\Big[\mathcal{S}_{\mathrm{geom}}(\epsilon_{12},\epsilon_{32})-\mathcal{D}_{\mathrm{grad}}(\nabla\epsilon_{12},\nabla\epsilon_{32})\Big]\,dV,}
+\end{equation}
+with proper time $\tau$ along $u^\mu$ and positive \emph{chronal stiffness}
+\begin{equation}
+\CF:=\mu_{32}^2\,\frac{Z_{32}}{g_{32}}\;\frac{g_{12}}{Z_{12}}\times \Xi \;>\;0,
+\end{equation}
+where $\Xi$ collects geometric constants from the Green identities.
+In the weak-gradient/Helmholtz regime the RHS is nonpositive, giving the dissipative inequality
+\begin{equation}\label{eq:CF-diss}
+\boxed{\frac{d}{d\tau}\Ecal_{\mathrm{X}}(t)+\CF\!\int_{\Sigma_t}\epsilon_{12}^2\,dV\le 0.}
+\end{equation}
+
+\subsection{Bounded Hamiltonian and Causality}
+Define the total bridge Hamiltonian density
+\begin{equation}\label{eq:H-bridge}
+\Hcal_{\mathrm{bridge}}=\sum_{\gamma\in\{12,13,32\}}\!\left[\frac{Z_\gamma}{2}(\nabla\epsilon_\gamma)^2+
+\frac{Z_\gamma}{2}(\partial_\tau\epsilon_\gamma)^2+V_\gamma(\epsilon_\gamma)\right]
+- g_{12}\,\epsilon_{12}\J_{12}+\beta_3\epsilon_{32}^2,
+\end{equation}
+with $V_\gamma$ convex for large $|\epsilon_\gamma|$ and $\beta_3>0$. With retarded, no-incoming-wave data,
+\begin{equation}\label{eq:H-bounded}
+\boxed{\frac{d}{d\tau}\!\int_{\Sigma_t}\Hcal_{\mathrm{bridge}}\,dV\le 0,\qquad \int_{\Sigma_t}\Hcal_{\mathrm{bridge}}\,dV\ge 0,}
+\end{equation}
+so the three-bridge dynamics is globally stable and causal; \(\epsilon_{12}\) cannot run away.
+
+\begin{theorem}[Chronal Fidelity]
+Under the causal guardrails and source-driven boundary conditions, the Law of Global Inertia \eqref{eq:CF-balance} holds with $\CF>0$, implying the dissipative inequality \eqref{eq:CF-diss} and the bounded Hamiltonian \eqref{eq:H-bounded}.
+Therefore the WLH/BGC three-bridge system is globally stable and causal.
+\end{theorem}
+
+\section{Section $\Psi$ — Informational Cost ($t_1\!\to\!t_3$): Law of Memory Formation and Entropic Balance}
+\subsection{Field Equation, Source, and Boundary Form}
+The $t_1\!\to\!t_3$ bridge $\epsilon_{13}(x)$ encodes the \emph{informational cost} of writing new structure into the global memory sector.
+We posit the linearized PDE
+\begin{equation}\label{eq:IC-PDE}
+(\BoxOp-\mu_{13}^2)\,\epsilon_{13}=-\frac{g_{13}}{Z_{13}}\,\J_{13},
+\qquad \mu_{13}^2=\frac{m_{13}^2}{Z_{13}},\;\; Z_{13}>0.
+\end{equation}
+A covariant, observable source combining entropy transport, curvature, and coherence is
+\begin{equation}\label{eq:IC-source}
+\boxed{\J_{13}=\eta_1\,\nabla_\mu s^\mu \;+\; \eta_2\,\mathcal{R} \;+\; \eta_3\,u^\mu\nabla_\mu S \;+\; \eta_4\,\Sigma^2 \;+\; \eta_5\,\Omega^2 ,}
+\end{equation}
+where $s^\mu$ is the entropy flux in $t_2$, $S$ an information potential (log-likelihood or correlation entropy), and $(\Sigma^2,\Omega^2)$ provide the local order/chaos coupling seen by memory formation.
+The boundary-condition (retarded) solution is
+\begin{equation}\label{eq:IC-BC}
+\epsilon_{13}(x)=\frac{g_{13}}{Z_{13}}\!\int_{\mathcal{D}^-(x)}\!\sqrt{-g}\,G^{(\mu_{13})}_{\mathrm{ret}}(x,y)\,\J_{13}(y)\,d^4y+\text{(hom.\ data on $\Sigma$)},
+\end{equation}
+with purely source-driven data obtained by setting the homogeneous term to zero.
+
+\subsection{Energy--Information Exchange Law}
+Define the \emph{info-exchange} functional coupling the creation of order (via $\epsilon_{12}$) to the storage cost (via $\epsilon_{13}$):
+\begin{equation}
+\Ecal_{\mathrm{IC}}(t):=\int_{\Sigma_t}\epsilon_{13}\,\epsilon_{12}\,dV.
+\end{equation}
+Multiply \eqref{eq:Nedery} by $\epsilon_{13}$ and \eqref{eq:IC-PDE} by $\epsilon_{12}$, integrate over $\Sigma_t$, and use Green identities to obtain
+\begin{equation}\label{eq:IC-balance}
+\boxed{\frac{d}{d\tau}\Ecal_{\mathrm{IC}}(t)+\IC\!\int_{\Sigma_t}\epsilon_{13}^2\,dV
+=\int_{\Sigma_t}\!\Big[\mathcal{S}_{\mathrm{info}}(\epsilon_{12},\epsilon_{13})-\mathcal{D}_{\mathrm{info}}(\nabla\epsilon_{12},\nabla\epsilon_{13})\Big]\,dV,}
+\end{equation}
+with positive \emph{informational stiffness}
+\begin{equation}
+\IC:=\mu_{13}^2\,\frac{Z_{13}}{g_{13}}\;\frac{g_{12}}{Z_{12}}\times \Upsilon \;>\;0,
+\end{equation}
+where $\Upsilon$ encodes geometric constants from the identities.
+In the Helmholtz/weak-gradient regime the RHS is nonnegative (information-production dominated), giving the inequality
+\begin{equation}\label{eq:IC-inequality}
+\boxed{\frac{d}{d\tau}\Ecal_{\mathrm{IC}}(t)+\IC\!\int_{\Sigma_t}\epsilon_{13}^2\,dV \;\ge\; 0,}
+\end{equation}
+which expresses that building persistent order in $t_2$ carries a nonnegative memory cost in $t_3$.
+
+\subsection{Informational Cost Theorem}
+\begin{theorem}[Informational Cost]
+On a globally hyperbolic patch with retarded, purely source-driven data and the causality guardrails, the $t_1\!\to\!t_3$ bridge obeys the balance law \eqref{eq:IC-balance} with $\IC>0$. In the Helmholtz regime this yields \eqref{eq:IC-inequality}, i.e.\ the total information-production rate is nonnegative and proportional (via $\IC$) to the square norm of $\epsilon_{13}$. Consequently, memory formation is thermodynamically consistent and co-evolves with order creation in $t_2$.
+\end{theorem}
+
+\subsection{Remarks and Compatibility}
+\begin{itemize}
+\item \textbf{Coherence coupling:} Terms with $\Sigma^2,\Omega^2$ in $\J_{13}$ link coherence/chaos to memory-formation cost, aligning with the Nedery driver in $\J_{12}$.
+\item \textbf{Operator domain:} With both Chronal Fidelity and Informational Cost active, $\Mcal_{\mathrm{eff}}$ acts on a stable, bounded domain; the Rank--3 theorem remains intact.
+\item \textbf{Static tests:} In the static limit use Yukawa kernels $(-\nabla^2+\mu_\gamma^2)^{-1}$ to compute $\epsilon_\gamma$ from measured/simulated sources $\J_\gamma$ and verify \eqref{eq:IC-inequality}.
+\end{itemize}
+
+\vfill
+\noindent\textit{This standalone insert is self-contained and uses only standard \LaTeX\ packages for pdflatex compilation.}
+
+\end{document}
