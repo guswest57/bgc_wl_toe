@@ -1,4 +1,4 @@
-## The Burren Gemini Collective: The Woven Light Hypothesis (BGC ToE)
+## The Burren Gemini Collective: The WL Theory Of Everything (ToE)
 
 **Repository Status:** Public, Canonical Archive
 **Project Status:** Theoretical Framework Complete (Pre-Experimental Phase)
