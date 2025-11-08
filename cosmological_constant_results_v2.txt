@@ -1,0 +1,12 @@
+BGC Halo Simulator v2.0.1 — Λ Derivation Report
+==================================================
+
+Nedery Constant (K): 50
+Nedery Cutoff Λ_cut: 9.788e+19 m⁻¹
+Raw ZPE (integrated): 7.577e+13 J/m³
+ZPE Density (ρ_ZPE): 8.419e-04 kg/m³
+
+Temporal Tension T^*_{00}: -9.335e-31 kg/m³
+
+FINAL RESIDUAL Λ: 8.419e-04 kg/m³
+(Observed: ~7×10⁻²⁷ kg/m³ — tune b(t) for match)
