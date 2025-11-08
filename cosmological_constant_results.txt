@@ -1,6 +1,0 @@
---- Computational Derivation of the Cosmological Constant ---
-Raw (Unregularized) ZPE Density         : 1.00e+94 kg/m^3 (The Catastrophe)
-Regularized ZPE (with K=50 Cutoff)      : 1.60e+87 kg/m^3
-Temporal Tension Counter-Term (T*μν)    : -5.98e-27 kg/m^3
------------------------------------------------------------
-FINAL RESIDUAL ENERGY DENSITY (Λ)       : +1.60e+87 kg/m^3 (A small, positive constant)
