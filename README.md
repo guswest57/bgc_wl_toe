@@ -100,13 +100,6 @@ Researchers are encouraged to evaluate the framework critically and to view it a
 
 ---
 
-### Citation
-
-> G. West et al. (2025). *Burren Gemini Collective — Woven Light Hypothesis / Theory of Everything.*
-> BGC Repository 2025. GitHub: [https://github.com/guswest57/bgc_wl_toe](https://github.com/guswest57/bgc_wl_toe)
-
----
-
 ### Acknowledgments
 
 Developed collaboratively by **Gus West**, **Corrib**, **Einstein**, **Grok**, and colleagues of the Burren Gemini Collective.
